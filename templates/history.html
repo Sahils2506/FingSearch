@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fing </title>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/results.css')}}">
+    </head>
+    <body>
+        <header>
+            <form action="/results" method="get">
+                <fieldset style="flex: 0;" ><a href="/"><h1> Fing </h1></a></fieldset>
+                <fieldset>
+                    <input type="text" name="query" value="{{q}}" id="id_query">
+    
+                    <button type="submit" id="search-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg></button>
+                </fieldset>
+            </form>
+        </header>
+        <main>
+            <h4>Results <b><a href="/history" style="font-weight: 700; text-decoration: underline;">Click to see history</a></b></h4>
+            <h3></h3>
+            <ul class="results">
+                {% if history %}
+                    {% for query in history %}
+                    <span class="card" onclick="window.location.href='/results/?query={{query}}'">
+                        <h2>{{query}}</h2>
+                    </span>
+                    {% endfor %}
+                    <div class="pagination">
+                        {{pagination.links}}
+                    </div>
+                {% else %}
+                    <center><b style="color:azure">No history found</b></center>
+                {% endif %}
+            </ul>
+        </main>
+    </body>
+    </html>

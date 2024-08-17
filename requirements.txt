@@ -1,0 +1,8 @@
+beautifulsoup4==4.10.0
+dnspython==2.2.1
+Flask==2.0.2
+flask_paginate==2022.1.8
+nltk==3.6.7
+pymongo==4.0.1
+requests==2.27.1
+gunicorn

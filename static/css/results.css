@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Righteous&display=swap');
+*{
+    font-family: 'Comfortaa',sans-serif;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    color: inherit;
+}
+html{
+    font-size: 16px;
+}
+h1{
+    font-size: 3rem;
+    font-weight: 400;
+    margin: auto auto;
+    letter-spacing: 0.2rem;
+    font-family: 'Righteous', cursive;
+}
+h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+@media screen and (max-width: 500px) {
+    html{
+        font-size: 14px;
+    }
+}
+body{
+    background-color: rgb(32, 32, 32);
+    color: hsl(0, 0%, 98%);
+}
+header{
+    position: sticky;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    gap: 2em;
+}
+header form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+header fieldset{
+    display: flex;
+    gap: 1em;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0px auto;
+    text-align: center;
+}
+input,button{
+    width: 80%;
+    font-size: 1.25rem;
+    padding: 1em 1em;
+    border-radius: 100px;
+    color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 4%);
+    margin: 0.5em auto;
+}
+#search-btn{
+    background-color: #4fa;
+    font-family: 'Righteous', cursive;
+    color: black;
+    font-weight: 700;
+    padding: 0.5em 1em;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    width: auto;
+}
+main{
+    padding: 0.5em 10vw;
+}
+.results{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+.results .card{
+    border-radius: 1em;
+    padding: 0.75em 1em;
+    background-color: hsl(0, 0%, 20%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.card a{
+    color: #4fa;
+}
+@media screen and (max-width: 500px) {
+    header form{
+        flex-direction: column;
+    }
+    header form h1{
+        font-size: 2rem;
+    }
+    header fieldset{
+        flex-direction: row;
+        gap: 0.5em;
+    }
+    header{
+        width: 90%;
+    }
+    main{
+        padding: 0.5em 5vw;
+    }
+}
+.pagination{
+    margin: 1em auto;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+.pagination li{
+    margin: auto 0px;
+}
+.pagination span,li{
+    background-color: hsl(0, 0%, 20%);
+    padding: 0.5em;
+    border-radius: 0.5rem;
+}
+.pagination li.active{
+    background-color: hsl(0, 0%, 50%);
+    padding: 0.5em;
+    border-radius: 0.5rem;
+}
+.pagination li.active span{
+    background-color: hsl(0, 0%, 50%);
+    padding: 0.5em;
+    border-radius: 0.5rem;
+}
+.disabled{
+    display: none;
+}

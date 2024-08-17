@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Righteous&display=swap');
+*{
+    font-family: 'Comfortaa',sans-serif;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    font-size: 16px;
+}
+h1{
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    font-family: 'Righteous', cursive;
+}
+h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+@media screen and (max-width: 500px) {
+    html{
+        font-size: 14px;
+    }
+}
+body{
+    background-color: rgb(32, 32, 32);
+    color: hsl(0, 0%, 98%);
+}
+header{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    /* max-width: 1000px; */
+    gap: 2em;
+}
+header form{
+    width: 100%;
+}
+header fieldset{
+    display: flex;
+    gap: 1em;
+    width: 100%;
+    max-width: 900px;
+    margin: 0px auto;
+}
+input,button{
+    width: 80%;
+    font-size: 1.25rem;
+    padding: 1em 1em;
+    border-radius: 100px;
+    color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 4%);
+    margin: 0.5em auto;
+}
+#search-btn{
+    background-color: #4fa;
+    font-family: 'Righteous', cursive;
+    color: black;
+    font-weight: 700;
+    padding: 0.5em 1em;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    width: auto;
+}
+@media screen and (max-width: 500px) {
+    fieldset{
+        flex-direction: column;
+    }
+}
